@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>评论管理</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+<link href="commentList.e6dff21.css" rel="stylesheet"></head>
+<body>
+    <!--Header-->
+    <header class="bg-white">
+    <nav class="navbar navbar-expand-md navbar-light container">
+        <a class="header-logo" href="http://www.csdn.net?ref=toolbar" title="CSDN首页" target="_blank">
+            <svg class="icon-logo">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item header-mod">
+                    <a class="nav-link header-mod-txt">创作中心</a>
+                </li>
+            </ul>
+            <a class="btn btn-bd-red d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3 btn-pencil" href="#">
+                <svg class="icon icon-pencil">
+                    <use xlink:href="#pencil"></use>
+                </svg>
+                写博客
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item nav-avatar">
+                    <a class="" href="#">
+                        <img class="nav-avatar-img" src="http://tva4.sinaimg.cn/crop.0.0.299.299.180/6ea03681jw8fcsf8492ozj208b08bmxf.jpg" width="56"
+                            height="56">
+                    </a>
+                </li>
+                <li class="nav-item header-ucenter">
+                    <a class="header-ucenter-uname nohover" href="#">熊佳牧熊佳牧熊佳牧</a>
+                    <a class="header-ucenter-logout nohover" href="#">退出</a>
+                    <!--<a class="header-ucenter-role" href="#">CSDN编辑</a>-->
+                    <a class="header-ucenter-role2" href="#">
+                        <img class="header-ucenter-role-img" src="http://tva4.sinaimg.cn/crop.0.0.299.299.180/6ea03681jw8fcsf8492ozj208b08bmxf.jpg"
+                            width="24" height="24" alt="博客专家" />
+                        <span class="header-ucenter-name">博客专家</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+        <!--Main Container -->
+        <main role="main" class="container">
+            <div class="row row-offcanvas row-offcanvas-right main-wrapper">
+                <!--Sidebar-->
+                <div class="col-6 col-md-2 sidebar-offcanvas" id="sidebar">
+    <div class="list-group-item list-group-title">内容</div>
+    <div class="list-group">
+        <a href="./article-list.html" class="list-group-item active">文章管理</a>
+        <a href="./comment-list.html" class="list-group-item">评论管理</a>
+        <a href="./blog-move-state.html" class="list-group-item">博客搬家</a>
+    </div>
+    <div class="list-group-item list-group-title">设置</div>
+    <div class="list-group">
+        <a href="#" class="list-group-item">博客设置</a>
+        <a href="wechatmp-setting.html" class="list-group-item">公众号设置</a>
+    </div>
+</div>
+
+                    <!--Content Body-->
+                    <div class="col-12 col-md-10" id="content-body">
+                        
+<div class="main-crumbs">评论管理</div>
+<div class="main-nav-tabs">
+    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+                aria-selected="true">我的文章评论</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-post-comm" role="tab" aria-controls="pills-post-comm"
+                aria-selected="false">我发表的评论</a>
+        </li>
+    </ul>
+</div>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show article-list active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
+        <div class="article-list-item">
+            <ul class="comment-list">
+                <li class="clearfix">
+                    <div class="img-avatar-box">
+                        <img src="assets/image_small.48757ce.jpg" width="32" height="32">
+                    </div>
+                    <div class="content-box">
+                        <div class="title">
+                            <span class="user-name">soledadzz</span><span class="date">昨天 19:52</span>回复了你的文章<a class="article-title c-blue">使用google身份验证器实现动态密码验证</a>
+                            <div class="opt-box clearfix">
+                                <a class="btn-txt c-blue icon-split btn-triggle-reply">快速回复</a><a class="btn-txt c-red">删除</a>
+                            </div>
+                        </div>
+                        <div class="comment-box">
+                            <svg class="icon-yinhao icon-zuoyinhao">
+                                <use xlink:href="#zuoyinhao"></use>
+                            </svg>
+                            Python创意编程线上活动，是CSDN下载频道和博客频道合力为程序员组织的一次兴趣编程活动。
+                            <svg class="icon-yinhao icon-youyinhao">
+                                <use xlink:href="#youyinhao"></use>
+                            </svg>
+                        </div>
+                        <div class="reply-box d-n">
+                            <div class="img-box">
+                                <img src="assets/image_small.48757ce.jpg" width="32" height="32">
+                            </div>
+                            <div class="ipt-box">
+                                <input class="txt txt-block" type="text" name="" id="" placeholder="发表你的评论">
+                            </div>
+                            <div class="opt-box">
+                                <button class="btn btn-reply">回复评论</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="pagination-wrapper">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">
+                                <svg class="icon-shouye">
+                                    <use xlink:href="#shouye"></use>
+                                </svg>
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">
+                                <svg class="icon-weiye">
+                                    <use xlink:href="#weiye"></use>
+                                </svg>
+                            </span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-post-comm" role="tabpanel" aria-labelledby="pills-post-comm">
+        <div class="tab-pane fade show article-list active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
+            <div class="article-list-item">
+                <ul class="comment-list my-comment">
+                    <li class="clearfix">
+                        <div class="content-box">
+                            <div class="title">
+                                <span class="user-name">我</span>
+                                <span class="date">昨天 19:52</span>评论了
+                                <span class="author-name">jack_nichao</span>的文章
+                                <a class="article-title c-blue">使用google身份验证器实现动态密码验证</a>
+                                <div class="opt-box clearfix">
+                                    <a class="btn-txt c-red">删除</a>
+                                </div>
+                            </div>
+                            <div class="comment-box">
+                                <svg class="icon-yinhao icon-zuoyinhao">
+                                    <use xlink:href="#zuoyinhao"></use>
+                                </svg>
+                                Python创意编程线上活动，是CSDN下载频道和博客频道合力为程序员组织的一次兴趣编程活动。
+                                <svg class="icon-yinhao icon-youyinhao">
+                                    <use xlink:href="#youyinhao"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="pagination-wrapper">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">
+                                <svg class="icon-shouye">
+                                    <use xlink:href="#shouye"></use>
+                                </svg>
+                            </span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">
+                                <svg class="icon-weiye">
+                                    <use xlink:href="#weiye"></use>
+                                </svg>
+                            </span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+            </div>
+        </main>
+        <!--Main Container-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>        
+<script type="text/javascript" src="commentList.bundle.e6dff21c40910d446dac.js"></script></body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>评论管理</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+<link href="wechatmpSetting.e6dff21.css" rel="stylesheet"></head>
+<body>
+    <!--Header-->
+    <header class="bg-white">
+    <nav class="navbar navbar-expand-md navbar-light container">
+        <a class="header-logo" href="http://www.csdn.net?ref=toolbar" title="CSDN首页" target="_blank">
+            <svg class="icon-logo">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item header-mod">
+                    <a class="nav-link header-mod-txt">创作中心</a>
+                </li>
+            </ul>
+            <a class="btn btn-bd-red d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3 btn-pencil" href="#">
+                <svg class="icon icon-pencil">
+                    <use xlink:href="#pencil"></use>
+                </svg>
+                写博客
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item nav-avatar">
+                    <a class="" href="#">
+                        <img class="nav-avatar-img" src="http://tva4.sinaimg.cn/crop.0.0.299.299.180/6ea03681jw8fcsf8492ozj208b08bmxf.jpg" width="56"
+                            height="56">
+                    </a>
+                </li>
+                <li class="nav-item header-ucenter">
+                    <a class="header-ucenter-uname nohover" href="#">熊佳牧熊佳牧熊佳牧</a>
+                    <a class="header-ucenter-logout nohover" href="#">退出</a>
+                    <!--<a class="header-ucenter-role" href="#">CSDN编辑</a>-->
+                    <a class="header-ucenter-role2" href="#">
+                        <img class="header-ucenter-role-img" src="http://tva4.sinaimg.cn/crop.0.0.299.299.180/6ea03681jw8fcsf8492ozj208b08bmxf.jpg"
+                            width="24" height="24" alt="博客专家" />
+                        <span class="header-ucenter-name">博客专家</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+        <!--Main Container -->
+        <main role="main" class="container">
+            <div class="row row-offcanvas row-offcanvas-right main-wrapper">
+                <!--Sidebar-->
+                <div class="col-6 col-md-2 sidebar-offcanvas" id="sidebar">
+    <div class="list-group-item list-group-title">内容</div>
+    <div class="list-group">
+        <a href="./article-list.html" class="list-group-item active">文章管理</a>
+        <a href="./comment-list.html" class="list-group-item">评论管理</a>
+        <a href="./blog-move-state.html" class="list-group-item">博客搬家</a>
+    </div>
+    <div class="list-group-item list-group-title">设置</div>
+    <div class="list-group">
+        <a href="#" class="list-group-item">博客设置</a>
+        <a href="wechatmp-setting.html" class="list-group-item">公众号设置</a>
+    </div>
+</div>
+
+                    <!--Content Body-->
+                    <div class="col-12 col-md-10" id="content-body">
+                        
+<div class="main-crumbs">公众号设置</div>
+<div class="main-content">
+    <div class="content content-noset"> 还在为先更新CSDN博客，还是先更新微信公众号而烦恼吗？ <br> CSDN博客推出的公众号抓取服务就可以为您解决这个烦恼，申请-提交-开通，三步搞定公众号。 <br> CSDN公众号服务仅限博客专家申请，开通之后可以获得 微信写手
+        称号以及勋章。
+        <p>可以获得以下权益：</p>
+        <div class="img-box row">
+            <div class="item-box col-sm-6 text-center">
+                <img src="assets/image_mp01.10de3ad.png" alt="">
+                <p>内容优先曝光，迅速提升人气</p>
+            </div>
+            <div class="item-box col-sm-6 text-center">
+                <img src="assets/image_mp02.7ca647e.png" alt="">
+                <p>公众号露出，吸粉更直接</p>
+            </div>
+        </div>
+        <div class="opt-box text-center"> <button class="btn btn-outline-danger btn-apply-mp">申请开通</button> </div>
+    </div>
+    <div class="content content-info-form d-none">
+        <form id="formMpSetting">
+            <div class="form-group row form-control-sm">
+                <label for="txtWechatMpName" class="labTitle col-form-label">网名或自媒体账号：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm" id="txtWechatMpName" placeholder="请输入博客标题" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm file-upload">
+                <label for="txtWechatMpName" class="labTitle col-form-label">公众号二维码：</label>
+                <div class="txt-box d-flex flex-row">
+                    <div class="default-img">
+                        <input type="file" title="上传公众号二维码" id="fileImg" required>
+                        <img id="img" src="assets/image_mp_qrcode.322d8fa.png" alt="">
+                    </div>
+                    <div class="opt-box d-flex flex-column justify-content-end"> <label class="link" for="fileImg">
+                            <svg class="icon-shangchuan">
+                                <use xlink:href="#shangchuan"></use>
+                            </svg>上传二维码图片
+                        </label>
+                        <p class="notice">(二维码 宽不大于500px 高不大于500px，图片大小不大于1m)</p>
+                    </div>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtId" class="labTitle col-form-label">个人身份证号：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm" id="txtId" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtAddress" class="labTitle col-form-label">地址：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm" id="txtAddress" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtPostalCode" class="labTitle col-form-label">邮政编码：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm" id="txtPostalCode" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtContactName" class="labTitle col-form-label">联系人：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm" id="txtContactName" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtMobile" class="labTitle col-form-label">联系电话：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm" id="txtMobile" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtEmail" class="labTitle col-form-label">电子邮箱：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm" id="txtEmail" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label class="labTitle col-form-label"></label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" id="chkIsAgree">
+                        <i class="lab-chk-icon" for="chkIsAgree">
+                            <svg class="icon-checked">
+                                <use xlink:href="#checked"></use>
+                            </svg>
+                        </i><span class="spanIsAgree">开通前，您已经请仔细阅读并同意</span><a href="">《CSDN自媒体作者合作协议》</a>
+                    </label>
+                </div>
+            </div>
+            <div class="opt-box row">
+                <label class="labTitle col-form-label"></label>
+                <div class="txt-box">
+                    <button class="btn btn-outline-danger" type="submit">申请开通</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+                    </div>
+            </div>
+        </main>
+        <!--Main Container-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>        
+<script type="text/javascript" src="wechatmpSetting.bundle.e6dff21c40910d446dac.js"></script></body>
+</html>
