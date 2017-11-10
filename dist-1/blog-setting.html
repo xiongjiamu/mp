@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>博客设置</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+<link href="blogSetting.18b8d63.css" rel="stylesheet"></head>
+<body>
+    <!--Header-->
+    <header class="bg-white">
+    <nav class="navbar navbar-expand-md navbar-light container">
+        <a class="header-logo" href="http://www.csdn.net?ref=toolbar" title="CSDN首页" target="_blank">
+            <svg class="icon-logo">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item header-mod">
+                    <a class="nav-link header-mod-txt">创作中心</a>
+                </li>
+            </ul>
+            <a class="btn btn-bd-red d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3 btn-pencil" href="#">
+                <svg class="icon icon-pencil">
+                    <use xlink:href="#pencil"></use>
+                </svg>
+                写博客
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item nav-avatar">
+                    <img class="nav-avatar-img" src="http://tva4.sinaimg.cn/crop.0.0.299.299.180/6ea03681jw8fcsf8492ozj208b08bmxf.jpg" width="56" height="56">
+                </li>
+                <li class="nav-item header-ucenter">
+                    <a class="header-ucenter-uname" href="#">张三疯</a>
+                    <a class="header-ucenter-logout" href="#">退出</a>
+                    <!--<a class="header-ucenter-role" href="#">CSDN编辑</a>-->
+                    <a class="header-ucenter-role2" href="#">
+                        <img class="header-ucenter-role-img" src="http://tva4.sinaimg.cn/crop.0.0.299.299.180/6ea03681jw8fcsf8492ozj208b08bmxf.jpg"
+                            width="24" height="24" alt="博客专家" />
+                        <span class="header-ucenter-name">博客专家</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+        <!--Main Container -->
+        <main role="main" class="container">
+            <div class="row row-offcanvas row-offcanvas-right main-wrapper">
+                <!--Sidebar-->
+                <div class="col-6 col-md-2 sidebar-offcanvas" id="sidebar">
+    <div class="list-group-item list-group-title">内容</div>
+    <div class="list-group">
+        <a href="./article-list.html" class="list-group-item active">文章管理</a>
+        <a href="./comment-list.html" class="list-group-item">评论管理</a>
+        <a href="./blog-move-state.html" class="list-group-item">博客搬家</a>
+    </div>
+    <div class="list-group-item list-group-title">设置</div>
+    <div class="list-group">
+        <a href="./blog-setting.html" class="list-group-item">博客设置</a>
+        <a href="./wechatmp-setting.html" class="list-group-item">公众号设置</a>
+    </div>
+</div>
+
+
+                    <!--Content Body-->
+                    <div class="col-12 col-md-10" id="content-body">
+                        
+<div class="main-content">
+    <div class="main-crumbs">博客设置</div>
+    <div class="content content-info-form">
+        <form id="formBlogSet" class="validate">
+            <div class="form-group row form-control-sm">
+                <label for="txtBlogName" class="labTitle col-form-label">博客标题：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm w-lg" id="txtBlogName" placeholder="请输入博客标题" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtBlogDes" class="labTitle col-form-label">博客描述：</label>
+                <div class="txt-box">
+                    <input type="text" class="form-control form-control-sm w-lg" id="txtBlogDes" placeholder="请输入博客标题" required>
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label for="txtBlogUrl" class="labTitle col-form-label">自定义个性域名：</label>
+                <div class="txt-box input-group w-lg">
+                    <span class="input-group-addon-url" id="basic-addon3">http://blog.csdn.net/</span>
+                    <input type="text" class="form-control form-control-sm" id="txtBlogUrl" placeholder="请输入个性域名" aria-describedby="basic-addon3"
+                        required>
+                </div>
+                <div class="invalid-feedback d-block">
+                    每90天可修改一次个性域名，博客专家特权
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label class="labTitle col-form-label">默认编辑器类型：</label>
+                <div class="form-radio">
+                    <input class="form-radio-input" type="radio" value="" name="editor_type" id="rdoEditorHtml">
+                    <label for="rdoEditorHtml" class="form-radio-label">
+                    HTML编辑器
+                </label>
+                    <input class="form-radio-input" type="radio" value="" name="editor_type" id="rdoEditorMD" checked>
+                    <label for="rdoEditorMD" class="form-radio-label">
+                    MarkDown编辑器
+                </label>
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label class="labTitle col-form-label">评论通知设置：</label>
+                <div class="switch-box">
+                    <input type="checkbox" class="form-control form-control-sm chk-switch" id="chkIsHasNotify">
+                    <label for="chkIsHasNotify" class="lab-switch"></label>
+                    <span class="ipt-remark">不将通知发送到绑定邮箱</span>
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label class="labTitle col-form-label">版权声明：</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="" id="chkIsAgree">
+                        <i class="lab-chk-icon" for="chkIsAgree">
+                            <svg class="icon-checked">
+                                <use xlink:href="#checked"></use>
+                            </svg>
+                        </i><span class="spanIsAgree">版权声明：本文为博主原创文章，未经博主允许不得转载</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group row form-control-sm">
+                <label class="labTitle col-form-label">自定义模块：</label>
+                <div class="switch-box">
+                    <input type="checkbox" class="form-control form-control-sm chk-switch" id="chkIsHasDIY">
+                    <label for="chkIsHasDIY" class="lab-switch"></label>
+                    <span class="ipt-remark">不将通知发送到绑定邮箱</span>
+                </div>
+            </div>
+            <div class="auto-diy-box">
+                <ul class="nav nav-tabs" id="myModuleType" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="ilb-tab" data-toggle="tab" href="#ilb" role="tab" aria-controls="home" aria-selected="true">
+                            <img src="assets/image_bs_01.58d6335.png" alt="">
+                            <p>图片＋标题＋按钮</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="lt-tab" data-toggle="tab" href="#lt" role="tab" aria-controls="profile" aria-selected="false">
+                            <img src="assets/image_bs_02.e5879d2.png" alt="">
+                            <p>标题＋文字链接</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="i-tab" data-toggle="tab" href="#i" role="tab" aria-controls="contact" aria-selected="false">
+                            <img src="assets/image_bs_03.9cb1459.png" alt="">
+                            <p>图片</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="ilb" role="tabpanel" aria-labelledby="ilb-tab">
+                        <div class="d-flex flex-row">
+                            <div class="img-box">
+                                <img src="assets/image_bsd_01.4cb1a11.png" alt="">
+                            </div>
+                            <div class="ipt-box">
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleName" class="labTitle col-form-label">自定义模块名称：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleTxt" class="labTitle col-form-label">图片地址：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleTxt" required>
+                                        <small id="emailHelp" class="form-text text-muted">建议图片尺寸：高300px 宽300px</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleImg" class="labTitle col-form-label">标题：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleImg" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtContent" class="labTitle col-form-label">按钮文案：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtContent" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtContent" class="labTitle col-form-label">按钮链接url：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtContent" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="lt" role="tabpanel" aria-labelledby="lt-tab">
+                        <div class="d-flex flex-row">
+                            <div class="img-box">
+                                <img src="assets/image_bsd_02.0600d39.png" alt="">
+                            </div>
+                            <div class="ipt-box">
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleName" class="labTitle col-form-label">自定义模块名称：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleTxt" class="labTitle col-form-label">内容文字：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleTxt" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleImg" class="labTitle col-form-label">按钮标题：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleImg" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtContent" class="labTitle col-form-label">文字链接URL：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtContent" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="i" role="tabpanel" aria-labelledby="i-tab">
+                        <div class="d-flex flex-row">
+                            <div class="img-box">
+                                <img src="assets/image_bsd_03.ab1ba10.png" alt="">
+                            </div>
+                            <div class="ipt-box">
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleName" class="labTitle col-form-label">自定义模块名称：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleTxt" class="labTitle col-form-label">内容文字：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleTxt" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtModuleImg" class="labTitle col-form-label">按钮标题：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtModuleImg" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row form-control-sm">
+                                    <label for="txtContent" class="labTitle col-form-label">文字链接URL：</label>
+                                    <div class="txt-box">
+                                        <input type="text" class="form-control form-control-sm" id="txtContent" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="opt-box row">
+                <label class="labTitle col-form-label"></label>
+                <div class="txt-box">
+                    <button class="btn btn-outline-danger" type="submit">保存</button>
+                    <button type="button" class="btn btn-outline-secondary ml-24">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+                    </div>
+            </div>
+        </main>
+        <!--Main Container-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>        
+<script type="text/javascript" src="blogSetting.bundle.18b8d633c0683c1ef45a.js"></script></body>
+</html>
